@@ -1,0 +1,6 @@
+com\microservices\admin\config\WebConfig.class
+com\microservices\admin\controller\AdminController.class
+com\microservices\admin\repository\AdminRepository.class
+com\microservices\admin\service\AdminService.class
+com\microservices\admin\model\Admin.class
+com\microservices\admin\AdminServiceApplication.class
