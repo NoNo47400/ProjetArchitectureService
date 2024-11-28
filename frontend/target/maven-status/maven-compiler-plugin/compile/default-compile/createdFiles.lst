@@ -1,8 +1,1 @@
-com\microservices\user_service\ObjectFactory.class
-com\microservices\user_service\GetUsersRequest.class
-com\microservices\user_service\package-info.class
-com\microservices\user_service\User.class
-com\microservices\user_service\GetUsersResponse.class
 com\microservices\frontend\FrontendApplication.class
-com\microservices\user_service\CreateUserRequest.class
-com\microservices\user_service\CreateUserResponse.class

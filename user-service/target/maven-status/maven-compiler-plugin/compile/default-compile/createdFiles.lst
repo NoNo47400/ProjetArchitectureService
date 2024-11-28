@@ -1,0 +1,6 @@
+com\microservices\user\model\User.class
+com\microservices\user\repository\UserRepository.class
+com\microservices\user\service\UserService.class
+com\microservices\user\config\WebConfig.class
+com\microservices\user\UserServiceApplication.class
+com\microservices\user\controller\UserController.class

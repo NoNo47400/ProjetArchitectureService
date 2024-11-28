@@ -51,9 +51,10 @@
     </style>
 </head>
 <body>
-    <h1>Admin Management</h1>
-    
     <div class="container">
+        <h1>Administration System</h1>
+        
+        <!-- Section Admin -->
         <div class="section">
             <h2>Admin Management</h2>
             <form id="adminForm">
@@ -63,9 +64,7 @@
                 <input type="text" id="adminRole" placeholder="Role" required>
                 <button type="submit">Create Admin</button>
             </form>
-            
-            <h3>Admins List</h3>
-            <table id="adminsTable">
+            <table id="adminTable">
                 <thead>
                     <tr>
                         <th>Username</th>
@@ -73,8 +72,27 @@
                         <th>Role</th>
                     </tr>
                 </thead>
-                <tbody>
-                </tbody>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Section User -->
+        <div class="section">
+            <h2>User Management</h2>
+            <form id="userForm">
+                <input type="text" id="userUsername" placeholder="Username" required>
+                <input type="email" id="userEmail" placeholder="Email" required>
+                <input type="password" id="userPassword" placeholder="Password" required>
+                <button type="submit">Create User</button>
+            </form>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
             </table>
         </div>
     </div>
@@ -84,7 +102,7 @@
             fetch('http://localhost:8082/api/admins')
                 .then(response => response.json())
                 .then(admins => {
-                    const tbody = document.querySelector('#adminsTable tbody');
+                    const tbody = document.querySelector('#adminTable tbody');
                     tbody.innerHTML = '';
                     admins.forEach(admin => {
                         tbody.innerHTML += `
@@ -115,8 +133,45 @@
             .catch(error => console.error('Error:', error));
         }
 
+        // Fonction pour charger les utilisateurs
+        function loadUsers() {
+            fetch('http://localhost:8081/api/users')
+                .then(response => response.json())
+                .then(users => {
+                    const tbody = document.querySelector('#userTable tbody');
+                    tbody.innerHTML = '';
+                    users.forEach(user => {
+                        tbody.innerHTML += `
+                            <tr>
+                                <td>${user.username}</td>
+                                <td>${user.email}</td>
+                            </tr>
+                        `;
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Fonction pour créer un utilisateur
+        function createUser(userData) {
+            fetch('http://localhost:8081/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                loadUsers();
+                document.getElementById('userForm').reset();
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             loadAdmins();
+            loadUsers();
 
             document.getElementById('adminForm').addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -127,6 +182,16 @@
                     role: document.getElementById('adminRole').value
                 };
                 createAdmin(adminData);
+            });
+
+            document.getElementById('userForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const userData = {
+                    username: document.getElementById('userUsername').value,
+                    email: document.getElementById('userEmail').value,
+                    password: document.getElementById('userPassword').value
+                };
+                createUser(userData);
             });
         });
     </script>
