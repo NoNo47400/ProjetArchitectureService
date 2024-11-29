@@ -3,48 +3,71 @@
 <head>
     <title>Admin Management</title>
     <style>
+        /* Styles pour la mise en page de base */
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            padding: 0;
+            background-color: #f5f5f5;
         }
-        .container {
-            padding: 20px;
-        }
+        
+        /* Style pour les sections principales */
         .section {
+            background-color: white;
             padding: 20px;
-            border: 1px solid #ccc;
+            margin-bottom: 20px;
             border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        
+        /* Style pour les formulaires */
         form {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            max-width: 300px;
         }
+        
+        /* Style pour les entrées */
         input {
-            padding: 5px;
-            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
+        
+        /* Style pour les boutons */
         button {
             padding: 10px;
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
         }
+        
         button:hover {
             background-color: #0056b3;
         }
+        
+        /* Style pour les messages d'erreur */
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+        
+        /* Style pour les tableaux */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
+        
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
+        
         th {
             background-color: #f4f4f4;
         }
@@ -52,9 +75,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Administration System</h1>
-        
-        <!-- Section Admin -->
+        <!-- Section de gestion des administrateurs -->
         <div class="section">
             <h2>Admin Management</h2>
             <form id="adminForm">
@@ -76,9 +97,10 @@
             </table>
         </div>
 
-        <!-- Section User -->
+        <!-- Section de gestion des utilisateurs -->
         <div class="section">
             <h2>User Management</h2>
+            <div id="userError" style="color: red; margin-bottom: 10px;"></div>
             <form id="userForm">
                 <input type="text" id="userUsername" placeholder="Username" required>
                 <input type="email" id="userEmail" placeholder="Email" required>
@@ -98,8 +120,13 @@
     </div>
 
     <script>
+        // URL de base des services
+        const adminServiceUrl = 'http://localhost:8082/api/admins';
+        const userServiceUrl = 'http://localhost:8081/ws';
+        
+        // Fonction pour charger les administrateurs
         function loadAdmins() {
-            fetch('http://localhost:8082/api/admins')
+            fetch(adminServiceUrl)
                 .then(response => response.json())
                 .then(admins => {
                     const tbody = document.querySelector('#adminTable tbody');
@@ -117,8 +144,9 @@
                 .catch(error => console.error('Error:', error));
         }
 
+        // Fonction pour créer un administrateur
         function createAdmin(adminData) {
-            fetch('http://localhost:8082/api/admins', {
+            fetch(adminServiceUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -133,46 +161,107 @@
             .catch(error => console.error('Error:', error));
         }
 
-        // Fonction pour charger les utilisateurs
-        function loadUsers() {
-            fetch('http://localhost:8081/api/users')
-                .then(response => response.json())
-                .then(users => {
-                    const tbody = document.querySelector('#userTable tbody');
-                    tbody.innerHTML = '';
-                    users.forEach(user => {
-                        tbody.innerHTML += `
-                            <tr>
-                                <td>${user.username}</td>
-                                <td>${user.email}</td>
-                            </tr>
-                        `;
-                    });
-                })
-                .catch(error => console.error('Error:', error));
-        }
-
-        // Fonction pour créer un utilisateur
+        // Fonction pour créer un utilisateur via SOAP
         function createUser(userData) {
-            fetch('http://localhost:8081/api/users', {
+            const soapRequest = `<?xml version="1.0" encoding="UTF-8"?>
+                <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                                xmlns:user="http://microservices.com/user">
+                    <soapenv:Header/>
+                    <soapenv:Body>
+                        <user:createUserRequest>
+                            <user:user>
+                                <user:username>${userData.username}</user:username>
+                                <user:email>${userData.email}</user:email>
+                                <user:password>${userData.password}</user:password>
+                            </user:user>
+                        </user:createUserRequest>
+                    </soapenv:Body>
+                </soapenv:Envelope>`;
+
+            fetch(userServiceUrl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'text/xml;charset=UTF-8',
+                    'SOAPAction': ''
                 },
-                body: JSON.stringify(userData)
+                body: soapRequest
             })
-            .then(response => response.json())
-            .then(data => {
+            .then(response => {
+                if (!response.ok) {
+                    return response.text().then(text => {
+                        throw new Error(text);
+                    });
+                }
+                return response.text();
+            })
+            .then(str => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(str, "text/xml");
+                
+                // Vérifier s'il y a une erreur SOAP
+                const faultString = xmlDoc.getElementsByTagName("faultstring")[0];
+                if (faultString) {
+                    throw new Error(faultString.textContent);
+                }
+                
                 loadUsers();
                 document.getElementById('userForm').reset();
+                document.getElementById('userError').textContent = '';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('userError').textContent = error.message || 'An error occurred while creating the user';
+            });
+        }
+
+        // Fonction pour charger la liste des utilisateurs
+        function loadUsers() {
+            const soapRequest = `<?xml version="1.0" encoding="UTF-8"?>
+                <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                                xmlns:user="http://microservices.com/user">
+                    <soapenv:Header/>
+                    <soapenv:Body>
+                        <user:getAllUsersRequest/>
+                    </soapenv:Body>
+                </soapenv:Envelope>`;
+
+            fetch(userServiceUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/xml;charset=UTF-8',
+                    'SOAPAction': ''
+                },
+                body: soapRequest
+            })
+            .then(response => response.text())
+            .then(str => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(str, "text/xml");
+                const users = xmlDoc.getElementsByTagName("ns2:user");
+                let html = '';
+                for (let user of users) {
+                    const username = user.getElementsByTagName("ns2:username")[0].textContent;
+                    const email = user.getElementsByTagName("ns2:email")[0].textContent;
+                    html += `
+                        <tr>
+                            <td>${username}</td>
+                            <td>${email}</td>
+                        </tr>
+                    `;
+                }
+                document.getElementById('userTable').getElementsByTagName('tbody')[0].innerHTML = html;
             })
             .catch(error => console.error('Error:', error));
         }
 
+        // Initialisation des gestionnaires d'événements
         document.addEventListener('DOMContentLoaded', function() {
+            // Chargement initial des administrateurs
             loadAdmins();
+            // Chargement initial des utilisateurs
             loadUsers();
 
+            // Gestionnaire de soumission du formulaire administrateur
             document.getElementById('adminForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const adminData = {
@@ -184,6 +273,7 @@
                 createAdmin(adminData);
             });
 
+            // Gestionnaire de soumission du formulaire utilisateur
             document.getElementById('userForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const userData = {

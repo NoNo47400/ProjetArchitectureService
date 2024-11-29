@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.2 
+Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2024.11.29 à 06:33:40 PM CET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://microservices.com/user">
+    <schemaBindings map="false">
+      <package name="com.microservices.user"/>
+    </schemaBindings>
+    <bindings scd="tns:getUserByIdRequest">
+      <class ref="com.microservices.user.GetUserByIdRequest"/>
+    </bindings>
+    <bindings scd="tns:getUserByIdResponse">
+      <class ref="com.microservices.user.GetUserByIdResponse"/>
+    </bindings>
+    <bindings scd="~tns:user">
+      <class ref="com.microservices.user.User"/>
+    </bindings>
+    <bindings scd="tns:getAllUsersRequest">
+      <class ref="com.microservices.user.GetAllUsersRequest"/>
+    </bindings>
+    <bindings scd="tns:getAllUsersResponse">
+      <class ref="com.microservices.user.GetAllUsersResponse"/>
+    </bindings>
+    <bindings scd="tns:createUserRequest">
+      <class ref="com.microservices.user.CreateUserRequest"/>
+    </bindings>
+    <bindings scd="tns:createUserResponse">
+      <class ref="com.microservices.user.CreateUserResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+
