@@ -1,6 +1,9 @@
+-- Permet de supprimer la base de données si elle existe
+DROP DATABASE IF EXISTS projet_gei_037;
+
 -- Création de la base de données pour le service utilisateur
-CREATE DATABASE IF NOT EXISTS user_service;
-USE user_service;
+CREATE DATABASE IF NOT EXISTS projet_gei_037;
+USE projet_gei_037;
 
 -- Création de la table des utilisateurs avec contrainte d'unicité sur le nom d'utilisateur
 CREATE TABLE IF NOT EXISTS users (

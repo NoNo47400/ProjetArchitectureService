@@ -1,70 +1,140 @@
-2024-11-29 10:38:52.308  INFO 22940 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 22940 (C:\Users\noelj\Desktop\test\archi_service_3\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\test\archi_service_3\frontend)
-2024-11-29 10:38:52.318 DEBUG 22940 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
-2024-11-29 10:38:52.319  INFO 22940 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-29 10:38:53.221  INFO 22940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-11-29 10:38:53.232  INFO 22940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-29 10:38:53.233  INFO 22940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2024-11-29 10:38:53.336  INFO 22940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-29 10:38:53.336  INFO 22940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 975 ms
-2024-11-29 10:38:53.525  INFO 22940 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-11-29 10:38:53.662  INFO 22940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-11-29 10:38:53.669  INFO 22940 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.704 seconds (JVM running for 2.002)
-2024-11-29 10:38:56.012  INFO 22940 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-29 10:38:56.013  INFO 22940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-29 10:38:56.014  INFO 22940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-29 11:02:11.010  INFO 24400 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 24400 (C:\Users\noelj\Desktop\test\archi_service_3\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\test\archi_service_3\frontend)
-2024-11-29 11:02:11.013 DEBUG 24400 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
-2024-11-29 11:02:11.014  INFO 24400 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-29 11:02:11.690  INFO 24400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-11-29 11:02:11.704  INFO 24400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-29 11:02:11.705  INFO 24400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2024-11-29 11:02:11.786  INFO 24400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-29 11:02:11.787  INFO 24400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 730 ms
-2024-11-29 11:02:12.001  INFO 24400 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-11-29 11:02:12.176  INFO 24400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-11-29 11:02:12.182  INFO 24400 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.472 seconds (JVM running for 1.703)
-2024-11-29 11:02:13.757  INFO 24400 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-29 11:02:13.757  INFO 24400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-29 11:02:13.758  INFO 24400 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-29 11:06:08.505  INFO 23092 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 23092 (C:\Users\noelj\Desktop\test\archi_service_3\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\test\archi_service_3\frontend)
-2024-11-29 11:06:08.506 DEBUG 23092 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
-2024-11-29 11:06:08.507  INFO 23092 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-29 11:06:09.102  INFO 23092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-11-29 11:06:09.109  INFO 23092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-29 11:06:09.110  INFO 23092 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2024-11-29 11:06:09.175  INFO 23092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-29 11:06:09.176  INFO 23092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 635 ms
-2024-11-29 11:06:09.293  INFO 23092 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-11-29 11:06:09.379  INFO 23092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-11-29 11:06:09.386  INFO 23092 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.139 seconds (JVM running for 1.403)
-2024-11-29 11:06:12.852  INFO 23092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-29 11:06:12.853  INFO 23092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-29 11:06:12.854  INFO 23092 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-11-29 11:35:59.053  INFO 26856 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 26856 (C:\Users\noelj\Desktop\test\archi_service_3\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\test\archi_service_3\frontend)
-2024-11-29 11:35:59.056 DEBUG 26856 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
-2024-11-29 11:35:59.056  INFO 26856 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-29 11:35:59.702  INFO 26856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-11-29 11:35:59.710  INFO 26856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-29 11:35:59.711  INFO 26856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2024-11-29 11:35:59.790  INFO 26856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-29 11:35:59.791  INFO 26856 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 698 ms
-2024-11-29 11:35:59.924  INFO 26856 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-11-29 11:36:00.025  INFO 26856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-11-29 11:36:00.031  INFO 26856 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.296 seconds (JVM running for 1.6)
-2024-11-29 11:36:00.081  INFO 26856 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-29 11:36:00.081  INFO 26856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-29 11:36:00.082  INFO 26856 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-11-29 18:30:07.665  INFO 12644 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 12644 (C:\Users\noelj\Desktop\test\archi_service_3\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\test\archi_service_3\frontend)
-2024-11-29 18:30:07.667 DEBUG 12644 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
-2024-11-29 18:30:07.668  INFO 12644 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-29 18:30:08.320  INFO 12644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-11-29 18:30:08.328  INFO 12644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-29 18:30:08.329  INFO 12644 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2024-11-29 18:30:08.392  INFO 12644 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-29 18:30:08.394  INFO 12644 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 688 ms
-2024-11-29 18:30:08.519  INFO 12644 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-11-29 18:30:08.640  INFO 12644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-11-29 18:30:08.648  INFO 12644 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.276 seconds (JVM running for 1.555)
-2024-11-29 18:30:15.941  INFO 12644 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-11-29 18:30:15.941  INFO 12644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-11-29 18:30:15.942  INFO 12644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-10 08:19:32.952  INFO 18276 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 18276 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 08:19:32.958 DEBUG 18276 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 08:19:32.960  INFO 18276 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 08:19:33.549  INFO 18276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 08:19:33.557  INFO 18276 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 08:19:33.557  INFO 18276 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 08:19:33.627  INFO 18276 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 08:19:33.628  INFO 18276 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 635 ms
+2024-12-10 08:19:33.762  INFO 18276 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 08:19:33.864  INFO 18276 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 08:19:33.870  INFO 18276 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.187 seconds (JVM running for 1.394)
+2024-12-10 08:19:41.123  INFO 18276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 08:19:41.124  INFO 18276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 08:19:41.126  INFO 18276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-10 08:23:20.694  INFO 1388 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 1388 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 08:23:20.696 DEBUG 1388 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 08:23:20.697  INFO 1388 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 08:23:21.345  INFO 1388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 08:23:21.355  INFO 1388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 08:23:21.355  INFO 1388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 08:23:21.428  INFO 1388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 08:23:21.428  INFO 1388 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 689 ms
+2024-12-10 08:23:21.564  INFO 1388 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 08:23:21.676  INFO 1388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 08:23:21.686  INFO 1388 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.272 seconds (JVM running for 1.491)
+2024-12-10 08:23:30.326  INFO 1388 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 08:23:30.326  INFO 1388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 08:23:30.328  INFO 1388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-10 08:42:55.648  INFO 13168 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 13168 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 08:42:55.650 DEBUG 13168 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 08:42:55.651  INFO 13168 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 08:42:56.288  INFO 13168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 08:42:56.297  INFO 13168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 08:42:56.297  INFO 13168 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 08:42:56.373  INFO 13168 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 08:42:56.374  INFO 13168 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 685 ms
+2024-12-10 08:42:56.510  INFO 13168 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 08:42:56.614  INFO 13168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 08:42:56.622  INFO 13168 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.253 seconds (JVM running for 1.473)
+2024-12-10 08:42:56.816  INFO 13168 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 08:42:56.816  INFO 13168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 08:42:56.817  INFO 13168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-10 09:09:17.414  INFO 25160 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 25160 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 09:09:17.416 DEBUG 25160 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 09:09:17.416  INFO 25160 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 09:09:18.016  INFO 25160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 09:09:18.024  INFO 25160 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 09:09:18.024  INFO 25160 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 09:09:18.093  INFO 25160 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 09:09:18.093  INFO 25160 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 641 ms
+2024-12-10 09:09:18.228  INFO 25160 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 09:09:18.345  INFO 25160 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 09:09:18.354  INFO 25160 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.211 seconds (JVM running for 1.417)
+2024-12-10 09:09:22.275  INFO 25160 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 09:09:22.276  INFO 25160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 09:09:22.277  INFO 25160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-10 09:15:00.137  INFO 4068 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 4068 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 09:15:00.140 DEBUG 4068 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 09:15:00.140  INFO 4068 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 09:15:00.726  INFO 4068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 09:15:00.736  INFO 4068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 09:15:00.736  INFO 4068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 09:15:00.806  INFO 4068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 09:15:00.807  INFO 4068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 634 ms
+2024-12-10 09:15:00.936  INFO 4068 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 09:15:01.034  INFO 4068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 09:15:01.041  INFO 4068 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.197 seconds (JVM running for 1.412)
+2024-12-10 09:15:08.044  INFO 4068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 09:15:08.044  INFO 4068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 09:15:08.045  INFO 4068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-10 09:39:39.443  INFO 4016 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 4016 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 09:39:39.445 DEBUG 4016 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 09:39:39.446  INFO 4016 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 09:39:39.958  INFO 4016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 09:39:39.966  INFO 4016 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 09:39:39.966  INFO 4016 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 09:39:40.030  INFO 4016 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 09:39:40.030  INFO 4016 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 552 ms
+2024-12-10 09:39:40.145  INFO 4016 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 09:39:40.233  INFO 4016 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 09:39:40.239  INFO 4016 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.046 seconds (JVM running for 1.237)
+2024-12-10 09:40:51.288  INFO 4016 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 09:40:51.288  INFO 4016 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 09:40:51.289  INFO 4016 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-10 09:41:07.808  INFO 24792 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 24792 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 09:41:07.810 DEBUG 24792 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 09:41:07.811  INFO 24792 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 09:41:08.330  INFO 24792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 09:41:08.337  INFO 24792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 09:41:08.338  INFO 24792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 09:41:08.398  INFO 24792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 09:41:08.398  INFO 24792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
+2024-12-10 09:41:08.512  INFO 24792 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 09:41:08.599  INFO 24792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 09:41:08.605  INFO 24792 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.037 seconds (JVM running for 1.232)
+2024-12-10 09:47:50.010  INFO 24792 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 09:47:50.011  INFO 24792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 09:47:50.013  INFO 24792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-10 09:50:20.102  INFO 8512 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 8512 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 09:50:20.104 DEBUG 8512 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 09:50:20.105  INFO 8512 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 09:50:20.633  INFO 8512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 09:50:20.640  INFO 8512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 09:50:20.640  INFO 8512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 09:50:20.705  INFO 8512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 09:50:20.705  INFO 8512 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 566 ms
+2024-12-10 09:50:20.823  INFO 8512 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 09:50:20.911  INFO 8512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 09:50:20.919  INFO 8512 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.169 seconds (JVM running for 1.412)
+2024-12-10 09:50:21.078  INFO 8512 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 09:50:21.079  INFO 8512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 09:50:21.081  INFO 8512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-10 10:30:44.261  INFO 6684 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 6684 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 10:30:44.265 DEBUG 6684 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 10:30:44.265  INFO 6684 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 10:30:45.007  INFO 6684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 10:30:45.020  INFO 6684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 10:30:45.020  INFO 6684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 10:30:45.101  INFO 6684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 10:30:45.101  INFO 6684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 795 ms
+2024-12-10 10:30:45.304  INFO 6684 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 10:30:45.474  INFO 6684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 10:30:45.485  INFO 6684 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.584 seconds (JVM running for 1.85)
+2024-12-10 10:30:52.570  INFO 6684 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 10:30:52.571  INFO 6684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 10:30:52.571  INFO 6684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-10 10:31:49.419  INFO 12704 --- [main] c.m.frontend.FrontendApplication         : Starting FrontendApplication using Java 17.0.12 on Noel-Laptop with PID 12704 (C:\Users\noelj\Desktop\ProjetArchitectureService\frontend\target\classes started by noelj in C:\Users\noelj\Desktop\ProjetArchitectureService\frontend)
+2024-12-10 10:31:49.421 DEBUG 12704 --- [main] c.m.frontend.FrontendApplication         : Running with Spring Boot v2.7.5, Spring v5.3.23
+2024-12-10 10:31:49.422  INFO 12704 --- [main] c.m.frontend.FrontendApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-12-10 10:31:50.070  INFO 12704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-12-10 10:31:50.079  INFO 12704 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-10 10:31:50.079  INFO 12704 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-12-10 10:31:50.149  INFO 12704 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-10 10:31:50.149  INFO 12704 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 695 ms
+2024-12-10 10:31:50.285  INFO 12704 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-12-10 10:31:50.395  INFO 12704 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-12-10 10:31:50.402  INFO 12704 --- [main] c.m.frontend.FrontendApplication         : Started FrontendApplication in 1.243 seconds (JVM running for 1.447)
+2024-12-10 10:31:57.414  INFO 12704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-10 10:31:57.415  INFO 12704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-10 10:31:57.416  INFO 12704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
