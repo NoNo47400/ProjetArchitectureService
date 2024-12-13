@@ -43,7 +43,20 @@ CREATE TABLE IF NOT EXISTS requests (
 -- Création de la table des réponses
 CREATE TABLE IF NOT EXISTS responses (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    volunteer_id BIGINT NOT NULL,
     request_id BIGINT NOT NULL,
     text_of_response VARCHAR(500) NOT NULL,
     FOREIGN KEY (request_id) REFERENCES requests(id) ON DELETE CASCADE
+    FOREIGN KEY (volunteer_id) REFERENCES volunteers(id) ON DELETE CASCADE
+);
+
+-- Création de la table des réponses
+CREATE TABLE IF NOT EXISTS feedbacks (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    response_id BIGINT NOT NULL,
+    text_of_feedback VARCHAR(500) NOT NULL,
+    validated BOOLEAN NOT NULL,
+    FOREIGN KEY (response_id) REFERENCES responses(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );

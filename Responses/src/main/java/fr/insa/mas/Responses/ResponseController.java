@@ -28,7 +28,7 @@ public class ResponseController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteRequest(@PathVariable Long id) {
+    public String deleteResponse(@PathVariable Long id) {
         responseRepository.deleteById(id);
         return "Success";
     }
