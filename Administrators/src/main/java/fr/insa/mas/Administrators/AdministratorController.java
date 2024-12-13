@@ -29,6 +29,11 @@ public class AdministratorController {
         return administratorRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Administrator getAdministrator(@PathVariable Long id) {
+        return administratorRepository.findById(id).orElseThrow();
+    }
+
     @PostMapping
     public Administrator createAdministrator(@RequestBody Administrator administrator) {
         return administratorRepository.save(administrator);
@@ -61,14 +66,6 @@ public class AdministratorController {
     public Request getRequest(@PathVariable Long id) {
         String url = "http://localhost:8084/requests/"+id; // Assurez-vous que l'URL est correcte
         ResponseEntity<Request> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, Request.class);
-        return responseEntity.getBody();
-    }
-
-    @PostMapping("/requests")
-    public Request updateRequest(@RequestBody Request request) {
-        String url = "http://localhost:8084/requests"; // Assurez-vous que l'URL est correcte
-        HttpEntity<Request> requestEntity = new HttpEntity<>(request);
-        ResponseEntity<Request> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Request.class);
         return responseEntity.getBody();
     }
 

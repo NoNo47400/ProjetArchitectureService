@@ -8,16 +8,16 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "response")
+@Table(name = "responses")
 public class Response {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "request_id", nullable = false)
     private Long requestId;
 
-    @Column(nullable = false)
+    @Column(name = "text_of_response", nullable = false)
     private String textOfResponse;
 
     // Getters and setters

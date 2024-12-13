@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/response")
+@RequestMapping("/responses")
 public class ResponseController {
 
     @Autowired
@@ -17,8 +17,19 @@ public class ResponseController {
         return responseRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Response getResponse(@PathVariable Long id) {
+        return responseRepository.findById(id).orElseThrow();
+    }
+
     @PostMapping
     public Response createResponse(@RequestBody Response response) {
         return responseRepository.save(response);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteRequest(@PathVariable Long id) {
+        responseRepository.deleteById(id);
+        return "Success";
     }
 }

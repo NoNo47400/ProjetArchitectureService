@@ -1,4 +1,4 @@
-package fr.insa.mas.Requests;
+package fr.insa.mas.Users;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,22 +8,22 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "requests")
+@Table(name = "request")
 public class Request {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id", nullable = false)
+    @Column(nullable = false)
     private Long userId;
 
-    @Column(name = "object_of_request", nullable = false, unique = true)
+    @Column(nullable = false)
     private String objectOfRequest;
 
-    @Column(name = "text_of_request", nullable = false)
+    @Column(nullable = false)
     private String textOfRequest;
 
-    @Column(name = "validated", nullable = false)
+    @Column(nullable = false)
     private Boolean validated;
 
     // Getters and setters

@@ -1,3 +1,5 @@
+SET FOREIGN_KEY_CHECKS = 1;
+
 -- Permet de supprimer la base de données si elle existe
 DROP DATABASE IF EXISTS projet_gei_037;
 
@@ -31,17 +33,17 @@ CREATE TABLE IF NOT EXISTS volunteers (
 -- Création de la table des requêtes
 CREATE TABLE IF NOT EXISTS requests (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    userId BIGINT NOT NULL,
-    objectOfRequest VARCHAR(255) NOT NULL UNIQUE,
-    textOfRequest VARCHAR(500) NOT NULL,
+    user_id BIGINT NOT NULL,
+    object_of_request VARCHAR(255) NOT NULL UNIQUE,
+    text_of_request VARCHAR(500) NOT NULL,
     validated BOOLEAN NOT NULL,
-    FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
 -- Création de la table des réponses
 CREATE TABLE IF NOT EXISTS responses (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    requestId BIGINT NOT NULL,
-    textOfResponse VARCHAR(500) NOT NULL,
-    FOREIGN KEY (requestId) REFERENCES requests(id) ON DELETE CASCADE
+    request_id BIGINT NOT NULL,
+    text_of_response VARCHAR(500) NOT NULL,
+    FOREIGN KEY (request_id) REFERENCES requests(id) ON DELETE CASCADE
 );

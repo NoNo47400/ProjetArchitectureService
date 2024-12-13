@@ -18,7 +18,7 @@ public class RequestController {
     }
 
     @GetMapping("/{id}")
-    public Request getAllRequests(@PathVariable Long id) {
+    public Request getRequest(@PathVariable Long id) {
         return requestRepository.findById(id).orElseThrow();
     }
 
