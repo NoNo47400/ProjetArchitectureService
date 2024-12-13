@@ -14,13 +14,13 @@ public class Request {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "user_id", nullable = false)
     private Long userId;
 
-    @Column(nullable = false)
+    @Column(name = "object_of_request", nullable = false)
     private String objectOfRequest;
 
-    @Column(nullable = false)
+    @Column(name = "text_of_request", nullable = false)
     private String textOfRequest;
 
     @Column(nullable = false)

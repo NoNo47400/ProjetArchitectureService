@@ -67,4 +67,26 @@ public class UserController {
         ResponseEntity<Request> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Request.class);
         return responseEntity.getBody();
     }
+
+    @DeleteMapping("/requests/{id}")
+    public String deleteRequest(@PathVariable Long id) {
+        String url = "http://localhost:8084/requests/"+id; // Assurez-vous que l'URL est correcte
+        ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.DELETE, null, String.class);
+        return responseEntity.getBody();
+    }
+
+    @GetMapping("/responses")
+    public List<Response> getAllResponses() {
+        ParameterizedTypeReference<List<Response>> responseType = new ParameterizedTypeReference<List<Response>>() {};
+        String url = "http://localhost:8085/responses"; // Assurez-vous que l'URL est correcte
+        ResponseEntity<List<Response>> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, responseType);
+        return responseEntity.getBody();
+    }
+
+    @GetMapping("/responses/{id}")
+    public Response getResponse(@PathVariable Long id) {
+        String url = "http://localhost:8085/responses/"+id; // Assurez-vous que l'URL est correcte
+        ResponseEntity<Response> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, Response.class);
+        return responseEntity.getBody();
+    }
 }
