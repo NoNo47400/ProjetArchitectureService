@@ -28,14 +28,13 @@ CREATE TABLE IF NOT EXISTS volunteers (
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
-
 -- Création de la table des requêtes
 CREATE TABLE IF NOT EXISTS requests (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     userId BIGINT NOT NULL,
     objectOfRequest VARCHAR(255) NOT NULL UNIQUE,
     textOfRequest VARCHAR(500) NOT NULL,
-    validated VARCHAR(255) NOT NULL,
+    validated BOOLEAN NOT NULL,
     FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE
 );
 
