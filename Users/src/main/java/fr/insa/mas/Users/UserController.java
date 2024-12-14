@@ -61,7 +61,7 @@ public class UserController {
     }
 
     @PostMapping("/requests")
-    public Request updateRequest(@RequestBody Request request) {
+    public Request createRequest(@RequestBody Request request) {
         String url = "http://localhost:8084/requests"; // Assurez-vous que l'URL est correcte
         HttpEntity<Request> requestEntity = new HttpEntity<>(request);
         ResponseEntity<Request> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Request.class);
@@ -89,4 +89,35 @@ public class UserController {
         ResponseEntity<Response> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, Response.class);
         return responseEntity.getBody();
     }
+
+    @PostMapping("/feedbacks")
+    public Feedback createFeedback(@RequestBody Feedback request) {
+        String url = "http://localhost:8086/feedbacks"; // Assurez-vous que l'URL est correcte
+        HttpEntity<Feedback> requestEntity = new HttpEntity<>(request);
+        ResponseEntity<Feedback> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Feedback.class);
+        return responseEntity.getBody();
+    }
+
+    @DeleteMapping("/feedbacks/{id}")
+    public String deleteFeedback(@PathVariable Long id) {
+        String url = "http://localhost:8086/feedbacks/"+id; // Assurez-vous que l'URL est correcte
+        ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.DELETE, null, String.class);
+        return responseEntity.getBody();
+    }
+
+    @GetMapping("/feedbacks")
+    public List<Feedback> getAllFeedbacks() {
+        ParameterizedTypeReference<List<Feedback>> responseType = new ParameterizedTypeReference<List<Feedback>>() {};
+        String url = "http://localhost:8086/feedbacks"; // Assurez-vous que l'URL est correcte
+        ResponseEntity<List<Feedback>> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, responseType);
+        return responseEntity.getBody();
+    }
+
+    @GetMapping("/feedbacks/{id}")
+    public Feedback getFeedback(@PathVariable Long id) {
+        String url = "http://localhost:8086/feedbacks/"+id; // Assurez-vous que l'URL est correcte
+        ResponseEntity<Feedback> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, Feedback.class);
+        return responseEntity.getBody();
+    }
+
 }

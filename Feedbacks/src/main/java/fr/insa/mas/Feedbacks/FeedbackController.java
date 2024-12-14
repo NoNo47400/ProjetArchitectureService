@@ -27,13 +27,6 @@ public class FeedbackController {
         return feedbackRepository.save(feedback);
     }
 
-    @PutMapping("/{id}")
-    public Feedback updateValidated(@RequestBody Feedback updatedFeedback, @PathVariable Long id) {
-        Feedback feedback = feedbackRepository.findById(id).orElseThrow();
-        feedback.updateValidated(updatedFeedback.getValidated());
-        return feedbackRepository.save(feedback);
-    }
-
     @DeleteMapping("/{id}")
     public String deleteFeedback(@PathVariable Long id) {
         feedbackRepository.deleteById(id);

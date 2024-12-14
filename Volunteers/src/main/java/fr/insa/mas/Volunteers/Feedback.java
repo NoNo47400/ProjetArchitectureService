@@ -1,4 +1,4 @@
-package fr.insa.mas.Feedbacks;
+package fr.insa.mas.Volunteers;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

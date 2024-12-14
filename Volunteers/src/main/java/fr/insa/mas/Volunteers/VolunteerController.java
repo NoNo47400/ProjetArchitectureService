@@ -30,13 +30,18 @@ public class VolunteerController {
         return volunteerRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Volunteer getVolunteer(@PathVariable Long id) {
+        return volunteerRepository.findById(id).orElseThrow();
+    }
+
     @PostMapping
     public Volunteer createVolunteer(@RequestBody Volunteer volunteer) {
         return volunteerRepository.save(volunteer);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteUser(@PathVariable Long id) {
+    public String deleteVolunteer(@PathVariable Long id) {
         volunteerRepository.deleteById(id);
         return "Success";
     }
@@ -72,7 +77,7 @@ public class VolunteerController {
     }
 
     @PostMapping("/responses")
-    public Response updateRequest(@RequestBody Response request) {
+    public Response createResponse(@RequestBody Response request) {
         String url = "http://localhost:8085/responses"; // Assurez-vous que l'URL est correcte
         HttpEntity<Response> requestEntity = new HttpEntity<>(request);
         ResponseEntity<Response> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Response.class);
@@ -80,9 +85,24 @@ public class VolunteerController {
     }
 
     @DeleteMapping("/responses/{id}")
-    public String deleteRequest(@PathVariable Long id) {
+    public String deleteResponse(@PathVariable Long id) {
         String url = "http://localhost:8085/responses/"+id; // Assurez-vous que l'URL est correcte
         ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.DELETE, null, String.class);
+        return responseEntity.getBody();
+    }
+
+    @GetMapping("/feedbacks")
+    public List<Feedback> getAllFeedbacks() {
+        ParameterizedTypeReference<List<Feedback>> responseType = new ParameterizedTypeReference<List<Feedback>>() {};
+        String url = "http://localhost:8086/feedbacks"; // Assurez-vous que l'URL est correcte
+        ResponseEntity<List<Feedback>> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, responseType);
+        return responseEntity.getBody();
+    }
+
+    @GetMapping("/feedbacks/{id}")
+    public Feedback getFeedback(@PathVariable Long id) {
+        String url = "http://localhost:8086/feedbacks/"+id; // Assurez-vous que l'URL est correcte
+        ResponseEntity<Feedback> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, Feedback.class);
         return responseEntity.getBody();
     }
 }
