@@ -24,6 +24,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(data => {
         const user = data.find(user => user.username === username && user.password === password);
         if (user) {
+            // Store user information in localStorage
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
             if (currentRole === 'admin') {
                 window.location.href = 'administrator.html';
             } else if (currentRole === 'user') {

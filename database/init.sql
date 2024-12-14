@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS responses (
     volunteer_id BIGINT NOT NULL,
     request_id BIGINT NOT NULL,
     text_of_response VARCHAR(500) NOT NULL,
-    FOREIGN KEY (request_id) REFERENCES requests(id) ON DELETE CASCADE
+    FOREIGN KEY (request_id) REFERENCES requests(id) ON DELETE CASCADE,
     FOREIGN KEY (volunteer_id) REFERENCES volunteers(id) ON DELETE CASCADE
 );
 
@@ -57,6 +57,6 @@ CREATE TABLE IF NOT EXISTS feedbacks (
     response_id BIGINT NOT NULL,
     text_of_feedback VARCHAR(500) NOT NULL,
     validated BOOLEAN NOT NULL,
-    FOREIGN KEY (response_id) REFERENCES responses(id) ON DELETE CASCADE
+    FOREIGN KEY (response_id) REFERENCES responses(id) ON DELETE CASCADE,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );

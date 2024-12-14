@@ -14,6 +14,9 @@ public class Response {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "volunteer_id", nullable = false)
+    private Long volunteerId;
+
     @Column(name = "request_id", nullable = false)
     private Long requestId;
 
@@ -27,6 +30,14 @@ public class Response {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getVolunteerId() {
+        return volunteerId;
+    }
+
+    public void setVolunteerId(Long volunteerId) {
+        this.volunteerId = volunteerId;
     }
 
     public Long getRequestId() {
