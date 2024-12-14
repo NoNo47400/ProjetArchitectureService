@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="dashboardHeader">Dashboard</h1>
+            <button id="logoutButton">Logout</button>
+        </header>
+        <div id="requestsContainer">
+            <!-- Requests and responses will be displayed here -->
+        </div>
+        <form id="createResponseForm" style="display: none;">
+            <h2>Create a New Response</h2>
+            <textarea id="responseText" placeholder="Text of Response" required></textarea>
+            <button type="submit">Submit Response</button>
+        </form>
+    </div>
+    <script src="../js/volunteer.js"></script>
+</body>
+</html>

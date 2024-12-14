@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Login</h1>
+        </header>
+        <div class="switch-buttons">
+            <button id="adminLogin">Administrator</button>
+            <button id="userLogin">User</button>
+            <button id="volunteerLogin">Volunteer</button>
+        </div>
+        <form id="loginForm" class="active">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="User Username" required>
+            <input type="password" id="password" placeholder="User Password" required>
+            <button type="submit">Login</button>
+            <p id="loginSuccessMessage" class="success-message" style="display: none;">Login successful!</p>
+            <p id="loginErrorMessage" class="error-message" style="display: none;">Login failed: <span id="loginErrorText"></span></p>
+        </form>
+        <form id="registerForm">
+            <h2>Create Account</h2>
+            <input type="text" id="newUsername" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="newPassword" placeholder="Password" required>
+            <button type="submit">Register</button>
+            <p id="registerSuccessMessage" class="success-message" style="display: none;">Account created successfully!</p>
+            <p id="registerErrorMessage" class="error-message" style="display: none;">Registration failed: <span id="registerErrorText"></span></p>
+        </form>
+        <div class="switch-buttons">
+            <button id="adminRegister">Create Admin Account</button>
+            <button id="userRegister">Create User Account</button>
+            <button id="volunteerRegister">Create Volunteer Account</button>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
