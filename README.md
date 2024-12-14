@@ -2,8 +2,9 @@
 
 ## Instructions
 
-1. Ouvrez un terminal pour chaque service et lancez-les.
-2. Une fois tous les services lancés, ouvrez le fichier `login.html` dans votre navigateur pour accéder à l'application.
+1. Démarrer le VPN INSA (sans celui-ci aucun accès à la base de donnée n'est possible)
+2. Ouvrez un terminal pour chaque service et lancez-les.
+3. Une fois tous les services lancés, ouvrez le fichier `login.html` dans votre navigateur pour accéder à l'application.
 
 ## Services
 
@@ -48,3 +49,12 @@ start Frontend/login.html
 ```
 
 ou simplement double-cliquant sur le fichier dans votre explorateur de fichiers.
+
+### Autres informations
+
+Si vous avez besoin de rénitialiser la base de donnée tapez les commandes suivantes:
+
+```bash
+cd database
+python3 initiate_database.py
+```
