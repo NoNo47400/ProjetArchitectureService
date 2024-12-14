@@ -27,11 +27,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             // Store user information in localStorage
             localStorage.setItem('loggedInUser', JSON.stringify(user));
             if (currentRole === 'admin') {
-                window.location.href = 'administrator.html';
+                window.location.href = '../html/administrator.html';
             } else if (currentRole === 'user') {
-                window.location.href = 'user.html';
+                window.location.href = '../html/user.html';
             } else if (currentRole === 'volunteer') {
-                window.location.href = 'volunteer.html';
+                window.location.href = '../html/volunteer.html';
             }
         } else {
             document.getElementById('loginErrorMessage').style.display = 'block';

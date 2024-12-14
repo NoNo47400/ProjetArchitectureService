@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Retrieve volunteer information from localStorage
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (!loggedInUser) {
-        window.location.href = 'login.html';
+        window.location.href = '../html/login.html';
         return;
     }
     const volunteerId = loggedInUser.id;
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle logout
     document.getElementById('logoutButton').addEventListener('click', function() {
         localStorage.removeItem('loggedInUser');
-        window.location.href = 'login.html';
+        window.location.href = '../html/login.html';
     });
 
     function fetchRequests() {

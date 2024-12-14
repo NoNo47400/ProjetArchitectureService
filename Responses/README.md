@@ -49,7 +49,7 @@ Pour récupérer une réponse par son ID :
 5. Cliquez sur `Send`.
 
 ### POST /responses
-Pour créer ou mettre à jour une réponse :
+Pour créer une nouvelle réponse :
 1. Ouvrez Postman.
 2. Créez une nouvelle requête.
 3. Sélectionnez le type de requête `POST`.
@@ -102,3 +102,4 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 server.port=8085
 spring.jpa.properties.hibernate.packagesToScan=com.example.package
+```

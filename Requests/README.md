@@ -49,7 +49,7 @@ Pour récupérer une requête par son ID :
 5. Cliquez sur `Send`.
 
 ### POST /requests
-Pour créer ou mettre à jour une requête :
+Pour créer une nouvelle requête :
 1. Ouvrez Postman.
 2. Créez une nouvelle requête.
 3. Sélectionnez le type de requête `POST`.
@@ -66,6 +66,25 @@ Pour créer ou mettre à jour une requête :
       "objectOfRequest": "New",
       "textOfRequest": "Request Text",
       "validated": false
+   }
+   ```
+8. Cliquez sur `Send`.
+
+### PUT /requests/{id}
+Pour mettre à jour une requête par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `PUT`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8084/requests/{id}
+   ```
+5. Allez dans l'onglet `Body`.
+6. Sélectionnez `raw` et `JSON` (application/json).
+7. Entrez le corps de la requête avec les détails de la mise à jour, par exemple :
+   ```json
+   {
+      "validated": true
    }
    ```
 8. Cliquez sur `Send`.
@@ -103,3 +122,4 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 server.port=8084
 spring.jpa.properties.hibernate.packagesToScan=com.example.package
+```

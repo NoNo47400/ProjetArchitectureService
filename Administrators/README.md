@@ -132,6 +132,72 @@ Pour supprimer une requête par son ID :
    ```
 5. Cliquez sur `Send`.
 
+### GET /feedbacks
+Pour récupérer la liste de tous les feedbacks :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8081/administrators/feedbacks
+   ```
+5. Cliquez sur `Send`.
+
+### GET /feedbacks/{id}
+Pour récupérer un feedback par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8081/administrators/feedbacks/{id}
+   ```
+5. Cliquez sur `Send`.
+
+### DELETE /feedbacks/{id}
+Pour supprimer un feedback par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `DELETE`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8081/administrators/feedbacks/{id}
+   ```
+5. Cliquez sur `Send`.
+
+### GET /responses
+Pour récupérer la liste de toutes les réponses :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8081/administrators/responses
+   ```
+5. Cliquez sur `Send`.
+
+### GET /responses/{id}
+Pour récupérer une réponse par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8081/administrators/responses/{id}
+   ```
+5. Cliquez sur `Send`.
+
+### DELETE /responses/{id}
+Pour supprimer une réponse par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `DELETE`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8081/administrators/responses/{id}
+   ```
+5. Cliquez sur `Send`.
+
 ## Initialisation de la base de données
 
 Pour initialiser la base de données, exécutez le script `initiate_database.py` :
@@ -154,3 +220,4 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 server.port=8081
 spring.jpa.properties.hibernate.packagesToScan=com.example.package
+```

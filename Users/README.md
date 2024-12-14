@@ -103,7 +103,7 @@ Pour récupérer une requête par son ID :
 5. Cliquez sur `Send`.
 
 ### POST /requests
-Pour créer ou mettre à jour une requête :
+Pour créer une nouvelle requête :
 1. Ouvrez Postman.
 2. Créez une nouvelle requête.
 3. Sélectionnez le type de requête `POST`.
@@ -154,6 +154,60 @@ Pour récupérer une réponse par son ID :
 4. Entrez l'URL suivante :
    ```
    http://localhost:8082/users/responses/{id}
+   ```
+5. Cliquez sur `Send`.
+
+### POST /feedbacks
+Pour créer un nouveau feedback :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `POST`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8082/users/feedbacks
+   ```
+5. Allez dans l'onglet `Body`.
+6. Sélectionnez `raw` et `JSON` (application/json).
+7. Entrez le corps de la requête avec les détails du feedback, par exemple :
+   ```json
+   {
+      "userId": 1,
+      "feedbackText": "Feedback Text",
+      "rating": 5
+   }
+   ```
+8. Cliquez sur `Send`.
+
+### DELETE /feedbacks/{id}
+Pour supprimer un feedback par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `DELETE`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8082/users/feedbacks/{id}
+   ```
+5. Cliquez sur `Send`.
+
+### GET /feedbacks
+Pour récupérer la liste de tous les feedbacks :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8082/users/feedbacks
+   ```
+5. Cliquez sur `Send`.
+
+### GET /feedbacks/{id}
+Pour récupérer un feedback par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8082/users/feedbacks/{id}
    ```
 5. Cliquez sur `Send`.
 

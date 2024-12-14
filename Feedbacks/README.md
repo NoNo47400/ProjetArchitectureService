@@ -49,7 +49,7 @@ Pour récupérer un feedback par son ID :
 5. Cliquez sur `Send`.
 
 ### POST /feedbacks
-Pour créer ou mettre à jour un feedback :
+Pour créer un nouveau feedback :
 1. Ouvrez Postman.
 2. Créez une nouvelle requête.
 3. Sélectionnez le type de requête `POST`.
@@ -63,9 +63,8 @@ Pour créer ou mettre à jour un feedback :
    ```json
    {
       "userId": 1,
-      "responseId": 1,
-      "textOfFeedback": "Feedback Text",
-      "validated": true
+      "feedbackText": "Feedback Text",
+      "rating": 5
    }
    ```
 8. Cliquez sur `Send`.
@@ -103,3 +102,4 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 server.port=8086
 spring.jpa.properties.hibernate.packagesToScan=com.example.package
+```

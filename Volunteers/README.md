@@ -70,7 +70,7 @@ Pour créer un nouveau volontaire :
 8. Cliquez sur `Send`.
 
 ### DELETE /volunteers/{id}
-Pour supprimer un volontaire par son ID (Attention: le volontaire ne doit pas avoir de réponses actives) :
+Pour supprimer un volontaire par son ID :
 1. Ouvrez Postman.
 2. Créez une nouvelle requête.
 3. Sélectionnez le type de requête `DELETE`.
@@ -125,7 +125,7 @@ Pour récupérer une réponse par son ID :
 5. Cliquez sur `Send`.
 
 ### POST /responses
-Pour créer ou mettre à jour une réponse :
+Pour créer une nouvelle réponse :
 1. Ouvrez Postman.
 2. Créez une nouvelle requête.
 3. Sélectionnez le type de requête `POST`.
@@ -156,6 +156,28 @@ Pour supprimer une réponse par son ID :
    ```
 5. Cliquez sur `Send`.
 
+### GET /feedbacks
+Pour récupérer la liste de tous les feedbacks :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8083/volunteers/feedbacks
+   ```
+5. Cliquez sur `Send`.
+
+### GET /feedbacks/{id}
+Pour récupérer un feedback par son ID :
+1. Ouvrez Postman.
+2. Créez une nouvelle requête.
+3. Sélectionnez le type de requête `GET`.
+4. Entrez l'URL suivante :
+   ```
+   http://localhost:8083/volunteers/feedbacks/{id}
+   ```
+5. Cliquez sur `Send`.
+
 ## Initialisation de la base de données
 
 Pour initialiser la base de données, exécutez le script `initiate_database.py` :
@@ -178,3 +200,4 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 server.port=8083
 spring.jpa.properties.hibernate.packagesToScan=com.example.package
+```

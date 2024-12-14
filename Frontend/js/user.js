@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Retrieve user information from localStorage
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (!loggedInUser) {
-        window.location.href = 'login.html';
+        window.location.href = '../html/login.html';
         return;
     }
     const userId = loggedInUser.id;
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle logout
     document.getElementById('logoutButton').addEventListener('click', function() {
         localStorage.removeItem('loggedInUser');
-        window.location.href = 'login.html';
+        window.location.href = '../html/login.html';
     });
 
     function fetchRequests() {
@@ -92,8 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     feedbacks.forEach(feedback => {
                         if (feedback.responseId === response.id) {
                             const feedbackElement = document.createElement('li');
-                            feedbackElement.textContent = feedback.textOfFeedback;
-                            feedbackElement.style.color = feedback.validated ? 'green' : 'red';
+                            feedbackElement.innerHTML = `
+                                <p>${feedback.textOfFeedback}</p>
+                                <p style="color: ${feedback.validated ? 'green' : 'red'};">${feedback.validated ? 'Validated' : 'Not Validated'}</p>
+                                ${feedback.userId === userId ? `<button type="button" class="deleteFeedbackButton" data-feedback-id="${feedback.id}">Delete</button>` : ''}
+                            `;
                             feedbackList.appendChild(feedbackElement);
                         }
                     });
@@ -121,6 +124,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 deleteResponse(requestId);
             });
         });
+
+        document.querySelectorAll('.deleteFeedbackButton').forEach(button => {
+            button.addEventListener('click', function() {
+                const feedbackId = this.getAttribute('data-feedback-id');
+                deleteFeedback(feedbackId);
+            });
+        });
     }
 
     function deleteResponse(requestId) {
@@ -134,6 +144,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             alert('Failed to delete response: ' + error);
+        });
+    }
+
+    function deleteFeedback(feedbackId) {
+        fetch(`http://localhost:8082/users/feedbacks/${feedbackId}`, {
+            method: 'DELETE'
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert('Feedback deleted successfully!');
+            fetchRequests();
+        })
+        .catch(error => {
+            alert('Failed to delete feedback: ' + error);
         });
     }
 
