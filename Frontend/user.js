@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3>Request: ${request.objectOfRequest}</h3>
                 <p>User: <a href="mailto:${user.email}" title="${user.email}"> ${user.username} </a></p>
                 <p>Text: ${request.textOfRequest}</p>
+                ${userId === request.userId ? `<button type="button" class="deleteButton" data-request-id="${request.id}">Delete</button>` : ''}
             `;
 
             const responseList = document.createElement('ul');
@@ -112,6 +113,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 createFeedbackForm.style.display = 'block';
                 requestsContainer.style.display = 'none';
             });
+        });
+
+        document.querySelectorAll('.deleteButton').forEach(button => {
+            button.addEventListener('click', function() {
+                const requestId = this.getAttribute('data-request-id');
+                deleteResponse(requestId);
+            });
+        });
+    }
+
+    function deleteResponse(requestId) {
+        fetch(`http://localhost:8082/users/requests/${requestId}`, {
+            method: 'DELETE'
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert('Response deleted successfully!');
+            fetchRequests();
+        })
+        .catch(error => {
+            alert('Failed to delete response: ' + error);
         });
     }
 

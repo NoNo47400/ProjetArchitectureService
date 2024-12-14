@@ -9,9 +9,17 @@
 <body>
     <div class="container">
         <header>
-            <h1>Volunteer Dashboard</h1>
+            <h1 id="dashboardHeader">Dashboard</h1>
+            <button id="logoutButton">Logout</button>
         </header>
-        <!-- Volunteer content goes here -->
+        <div id="requestsContainer">
+            <!-- Requests and responses will be displayed here -->
+        </div>
+        <form id="createResponseForm" style="display: none;">
+            <h2>Create a New Response</h2>
+            <textarea id="responseText" placeholder="Text of Response" required></textarea>
+            <button type="submit">Submit Response</button>
+        </form>
     </div>
     <script src="volunteer.js"></script>
 </body>
