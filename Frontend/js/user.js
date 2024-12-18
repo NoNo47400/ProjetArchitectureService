@@ -92,11 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     feedbacks.forEach(feedback => {
                         if (feedback.responseId === response.id) {
                             const feedbackElement = document.createElement('li');
-                            feedbackElement.innerHTML = `
-                                <p>${feedback.textOfFeedback}</p>
-                                <p style="color: ${feedback.validated ? 'green' : 'red'};">${feedback.validated ? 'Validated' : 'Not Validated'}</p>
-                                ${feedback.userId === userId ? `<button type="button" class="deleteFeedbackButton" data-feedback-id="${feedback.id}">Delete</button>` : ''}
-                            `;
+                            feedbackElement.textContent = feedback.textOfFeedback;
+                            feedbackElement.style.color = feedback.validated ? 'green' : 'red';
+                            feedbackElement.innerHTML += feedback.userId === userId ? `<button type="button" class="deleteFeedbackButton" data-feedback-id="${feedback.id}">Delete Feedback</button>` : '';
                             feedbackList.appendChild(feedbackElement);
                         }
                     });

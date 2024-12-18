@@ -64,7 +64,7 @@ Pour créer un nouveau feedback :
    {
       "userId": 1,
       "feedbackText": "Feedback Text",
-      "rating": 5
+      "validated": 5
    }
    ```
 8. Cliquez sur `Send`.

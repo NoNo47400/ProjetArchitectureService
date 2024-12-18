@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS volunteers (
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL
 );
+
 -- Création de la table des requêtes
 CREATE TABLE IF NOT EXISTS requests (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -50,7 +51,7 @@ CREATE TABLE IF NOT EXISTS responses (
     FOREIGN KEY (volunteer_id) REFERENCES volunteers(id) ON DELETE CASCADE
 );
 
--- Création de la table des réponses
+-- Création de la table des feedbacks
 CREATE TABLE IF NOT EXISTS feedbacks (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     user_id BIGINT NOT NULL,
